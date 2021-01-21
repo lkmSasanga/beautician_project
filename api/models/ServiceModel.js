@@ -34,15 +34,15 @@ var ServiceModelSchema = new Schema({
     }
 });
 
-ServiceModelSchema.index({
-    title: 'text',
-    description: 'text',
-}, {
-    weights: {
-        title: 3,
-        description: 5,
-    },
-});
+// ServiceModelSchema.index({
+//     title: 'text',
+//     description: 'text',
+// }, {
+//     weights: {
+//         title: 3,
+//         description: 5,
+//     },
+// });
 
 const Service = mongoose.model('Service', ServiceModelSchema);
 module.exports = { Service }
